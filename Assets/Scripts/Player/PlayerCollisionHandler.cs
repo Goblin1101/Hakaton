@@ -14,7 +14,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Obstacle component))
         {
-           // component.AcceptEnter(_playerObstacleVisitor);
+            component.AcceptEnter(_playerObstacleVisitor);
         }
     }
 
@@ -22,7 +22,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Obstacle component))
         {
-            //component.AcceptExit(_playerObstacleVisitor);
+            component.AcceptExit(_playerObstacleVisitor);
         }
     }
 }

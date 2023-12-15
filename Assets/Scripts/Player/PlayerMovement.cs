@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerConfiguration))]
 public class PlayerMovement : MonoBehaviour
 {
     [field: SerializeField]
-    public float Speed { get; set; } = 5f;
+    public float Speed { get; set; }
 
+    private PlayerConfiguration _configuration;
 
     private Rigidbody2D _rigidbody;
     private float _xDirection = 0;
@@ -15,7 +17,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        _configuration = GetComponent<PlayerConfiguration>();
         _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        Speed = _configuration.Speed;
     }
 
     private void FixedUpdate()
