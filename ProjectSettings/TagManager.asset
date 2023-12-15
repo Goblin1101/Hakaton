@@ -9,16 +9,16 @@ TagManager:
   - Mirror
   - ForceField
   - Grid
-  - Roof
+  - Note
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
   - Surface
-  - ForceField
+  - 
   - 
   - 
   - 
