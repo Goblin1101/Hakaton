@@ -32,5 +32,9 @@ public class GateActivator : MonoBehaviour
         if (!_activated) off_state.Play();
         gate.GateClose();
 
+    private void activationSwitch()
+    {
+        if (_activated) _activated = false;
+        else _activated = true;
     }
 }
