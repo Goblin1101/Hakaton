@@ -4,5 +4,7 @@ using UnityEngine;
 
 public abstract class Obstacle : MonoBehaviour
 {
-    public abstract void Accept(ObstacleVisitor visitor);
+    public abstract void AcceptEnter(ObstacleVisitor visitor);
+    public abstract void AcceptStay(ObstacleVisitor visitor);
+    public abstract void AcceptExit(ObstacleVisitor visitor);
 }

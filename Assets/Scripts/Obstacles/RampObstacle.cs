@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class RampObstacle : Obstacle
 {
-    public override void Accept(ObstacleVisitor visitor)
+    ///TODO: разелить методы на отдельные интерфейсы
+    public override void AcceptEnter(ObstacleVisitor visitor)
     {
         visitor.VisitRampObstacle(this);
+    }
+
+    public override void AcceptExit(ObstacleVisitor visitor)
+    {
+        visitor.VisitRampObstacleExit(this);
+    }
+
+    public override void AcceptStay(ObstacleVisitor visitor)
+    {
+        throw new System.NotImplementedException();
     }
 }
